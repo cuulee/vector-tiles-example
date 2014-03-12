@@ -98,8 +98,8 @@ function onRequest(request, response) {
             break;
 
         default:
-            response.writeHead(404);
-            response.write('Not found.');
+            response.writeHead(404, {'content-type': 'text/html'});
+            response.write('Not found.<br>Are you looking for the <a class=link href="/map.html">map</a>?');
             response.end();
 
     }
